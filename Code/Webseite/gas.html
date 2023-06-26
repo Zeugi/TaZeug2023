@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style/main.css">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+        <script src="script/gas.js" async></script>
+        <title>Energiemonitor</title>
+    </head>
+    <body>
+        <header>
+            <h1>Energiespiegel</h1>
+            <nav>
+              <ul>
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="strom.html">Strom</a></li>
+                <li><a href="wasser.html">Wasser</a></li>
+                <li><a href="gas.html">Gas</a></li>
+                <li><a href="./admin/index.php">Login</a></li>
+              </ul>
+            </nav>
+          </header>
+        <main>
+            <div class="kacheln">
+                <h1>Gas Verbrauch</h1>
+                <div class="chartBox1 chartBoxes">
+                    <canvas id="myChart1" style="background-color: white; border-radius: 10px;"></canvas>
+                </div>
+            </div>
+
+            <div class="kacheln">
+                <h1>Gesamt Verbrauch</h1>
+                <div class="chartBoxes">
+                <Table class="tabelleLangzeit"> 
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Verbrauch</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Stunde</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Tag</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Woche</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Monat</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Jahr</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </Table>
+                </div>     
+            </div>
+
+            <div class="kacheln">
+                <h1>Daten Filtern</h1>
+                <div class="textFeld">
+                    <div>
+                        Filtern nach: 
+                        <select name="Filter" id="filter">
+                            <option value="Anzahl">
+                                Anzahl
+                            </option>
+                            <option value="Datum">
+                                Datum
+                            </option>
+                        </select>
+                        Auflösung:
+                        <select name="aufloesung" id="aufloesung">
+                            <option value="Minute">
+                                Minute
+                            </option>
+                            <option selected value="Stunde">
+                                Stunde
+                            </option>
+                            <option value="Tag">
+                                    Tag
+                                </option>
+                            <option value="Woche">
+                                Woche
+                            </option>
+                            <option value="Monat">
+                                Monat
+                            </option>
+                            <option value="Jahr">
+                                Jahr
+                            </option>
+                        </select>
+                        <div class="datum">
+                            <input type="datetime-local" name="" id="startdate">
+                            bis
+                            <input type="datetime-local" name="" id="enddate">
+                        </div>
+                        <div class="anzahl">
+                            Letzte: 
+                            <input type="number" name="zahlen" id="zahlen" value="24">
+
+                            <select name="intervall" id="intervall">
+                                <option value="Minute">
+                                    Minute
+                                </option>
+                                <option selected value="Stunde">
+                                    Stunde
+                                </option>
+                                <option value="Tag">
+                                    Tag
+                                </option>
+                                <option value="Woche">
+                                    Woche
+                                </option>
+                                <option value="Monat">
+                                    Monat
+                                </option>
+                                <option value="Jahr">
+                                    Jahr
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>

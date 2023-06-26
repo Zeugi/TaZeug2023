@@ -1,0 +1,207 @@
+/*************************************** 
+ * Reset
+****************************************/
+* { padding: 0; margin: 0; }
+
+html{ overflow-y: scroll; }
+
+h2, p, ul, ol, blockquote, table { margin-bottom: 1em; }
+
+ul ul, ul ol, ol ol, ol ul { margin-bottom: 0; }
+
+ul, ol { margin-left: 2em; }
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+
+body{
+    margin: 0;
+    background-color: whitesmoke;
+}
+
+main{
+    display: grid;
+    gap: 2em;
+    padding: 2em;
+    padding-top: 2em;
+    grid-template-columns: 1fr;
+    height: 85vh;
+    /*grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));*/
+
+}
+
+@media (min-width: 30em) { 
+    main{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .strommix{
+      grid-column: span 2; 
+    }
+}
+
+table th{
+  background-color: rgb(223, 185, 135);
+}
+
+
+table td{
+  text-align: center;
+  background-color: rgb(237, 211, 176);
+}
+
+.tabelleLangzeit{
+  font-size: 1.2em;
+}
+
+.textFeld{
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  height: 85%; 
+}
+
+.textFeld span{
+  font-size: 5em;
+  text-align: center;
+}
+
+/*************************************** 
+ * Kacheln
+****************************************/
+.kacheln h1{
+  margin: 0;
+  text-align: center;
+}
+
+.kacheln{
+  background-color: white;
+  border-radius: 2em;
+  box-shadow: 1em 1em 1em gray;
+  height: 40vh;
+  .chartBoxes{
+      height: 75%;
+      padding: 1em;
+  }
+}
+
+.kacheln h1 {
+  text-align: center;
+}
+
+.chartBoxes table {
+  width: 100%;
+  height: 100%;
+}
+
+.datum{
+  display: none;
+}
+
+/*************************************** 
+ * Navbar
+****************************************/
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 1em;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+header h1 {
+  margin-bottom: 0.1em;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 1em;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+
+/*************************************** 
+ * Ampel
+****************************************/
+
+.ampelKachel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 85%;
+}
+
+.ampel {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 1em;
+}
+
+.ampelText{
+  margin: 1em;
+  font-size: 1.5em;
+}
+
+.gruen,
+.gelb,
+.orange,
+.rot {
+  width: 3em;
+  height: 3em;
+  border-radius: 1.6em;
+  border: 0.2em solid black;
+}
+
+.gruen {
+  background-color: rgba(0, 255, 0, 0.25);
+}
+
+.gelb {
+  background-color: rgba(255, 255, 0, 0.25);
+}
+
+.orange {
+  background-color: rgba(255, 166, 0, 0.25);
+}
+
+.rot {
+  background-color: rgba(255, 0, 0, 0.25);
+}
+
+
+/*************************************** 
+ * Wetter
+****************************************/
+
+.wetter{
+  list-style-type: none;
+  font-size: 1.2em;
+}
+
+.wetter span{
+  font-weight: bold;
+}
+
+.wetterEimer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 85%;
+}

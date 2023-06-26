@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style/main.css">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+        <script src="script/dashboard.js" async></script>
+        <title>Energiemonitor</title>
+    </head>
+    <body>
+        <header>
+            <h1>Energiespiegel</h1>
+            <nav>
+              <ul>
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="strom.html">Strom</a></li>
+                <li><a href="wasser.html">Wasser</a></li>
+                <li><a href="gas.html">Gas</a></li>
+                <li><a href="./admin/index.php">Login</a></li>
+              </ul>
+            </nav>
+          </header>
+        <main>
+            <div class="kacheln">
+                <h1>Stromverbrauch</h1>
+                <div class="chartBox1 chartBoxes">
+                    <canvas id="myChart1" style="background-color: white; border-radius: 10px;"></canvas>
+                </div>
+            </div>
+
+            <div class="kacheln">
+                <h1>Gesamtwerte</h1>
+                <div class="chartBoxes">
+                <Table class="tabelleLangzeit"> 
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Strom</th>
+                            <th>Solar</th>
+                            <th>Gas</th>
+                            <th>Wasser</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Stunde</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Tag</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Woche</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Monat</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Jahr</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </Table>
+                </div>
+            </div>
+
+            <div class="kacheln">
+                <h1>Wetter in Tettnang</h1>
+                <div class="wetterEimer">
+                    <ul class="wetter">
+                        <li>Außentemperatur: <span></span></li>
+                        <li>Innentemperatur: <span></span></li>
+                        <li>Luftfeuchtigkeit Außen: <span></span></li>
+                        <li>Sonneneinstrahlung: <span></span></li>
+                        <li>Uv-Index: <span></span></li>
+                        <li>Regenrate: <span></span></li>
+                        <li>Regenmenge: <span></span></li>
+                        <li>Windrichtng: <span></span></li>
+                        <li>Windgeschwindigkeit: <span></span></li>
+                        <li>Letzte Aktuallisierung: <span></span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="kacheln strommix">
+                <h1>Strommix Deutschland</h1>
+                <div class="chartBoxMarkt chartBoxes">
+                    <canvas id="myChartMarkt" style="background-color: white; border-radius: 10px;"></canvas>
+                </div>
+            </div>
+
+            <div class="kacheln">
+                <h1>Netzauslastung</h1>
+                <div class="ampelKachel">
+                    <div class="ampel">
+                        <div class="gruen"></div>
+                        <div class="gelb"></div>
+                        <div class="orange"></div>
+                        <div class="rot"></div>
+                    </div>
+                    <div class="ampelText">
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </body>
+</html>
